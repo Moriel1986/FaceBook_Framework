@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14150" started-at="2020-05-11T19:25:15 CDT" finished-at="2020-05-11T19:25:29 CDT">
+  <suite name="Default suite" duration-ms="15126" started-at="2020-05-15T11:06:57 CDT" finished-at="2020-05-15T11:07:12 CDT">
     <groups>
       <group name="Regression">
         <method signature="TestScripts.login()[pri:1, instance:Page_Object_Model.TestScripts@149494d8]" name="login" class="Page_Object_Model.TestScripts"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="14150" started-at="2020-05-11T19:25:15 CDT" finished-at="2020-05-11T19:25:29 CDT">
+    <test name="Default test" duration-ms="15126" started-at="2020-05-15T11:06:57 CDT" finished-at="2020-05-15T11:07:12 CDT">
       <class name="Page_Object_Model.TestScripts">
-        <test-method status="PASS" signature="startTest()[pri:0, instance:Page_Object_Model.TestScripts@149494d8]" name="startTest" is-config="true" duration-ms="9849" started-at="2020-05-11T19:25:15 CDT" finished-at="2020-05-11T19:25:25 CDT">
+        <test-method status="PASS" signature="startTest()[pri:0, instance:Page_Object_Model.TestScripts@149494d8]" name="startTest" is-config="true" duration-ms="10944" started-at="2020-05-15T11:06:57 CDT" finished-at="2020-05-15T11:07:08 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="login()[pri:1, instance:Page_Object_Model.TestScripts@149494d8]" name="login" duration-ms="670" started-at="2020-05-11T19:25:25 CDT" finished-at="2020-05-11T19:25:26 CDT">
+        <test-method status="PASS" signature="login()[pri:1, instance:Page_Object_Model.TestScripts@149494d8]" name="login" duration-ms="616" started-at="2020-05-15T11:07:08 CDT" finished-at="2020-05-15T11:07:09 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:Page_Object_Model.TestScripts@149494d8]" name="endTest" is-config="true" duration-ms="3555" started-at="2020-05-11T19:25:26 CDT" finished-at="2020-05-11T19:25:29 CDT">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:Page_Object_Model.TestScripts@149494d8]" name="endTest" is-config="true" duration-ms="3494" started-at="2020-05-15T11:07:09 CDT" finished-at="2020-05-15T11:07:12 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->

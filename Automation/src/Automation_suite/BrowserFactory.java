@@ -357,6 +357,8 @@ public class BrowserFactory
 		
 		public static WebDriver startBrowser(String browserName, String url)
 		{
+			BrowserFactory B = new BrowserFactory();
+			
 			if(browserName.equalsIgnoreCase("firefox"))
 			{
 				System.setProperty("webdriver.gecko.driver","C:/Users/Demoriel Purnell/workspace_python/drivers/geckodriver.exe");
@@ -364,22 +366,22 @@ public class BrowserFactory
 			}
 			else if(browserName.equalsIgnoreCase("chrome")) 
 			{
+				System.setProperty("webdriver.chrome.driver", "C:/Users/Demoriel Purnell/git/FaceBook_Framework/Automation/Driver/chromedriver.exe");
 				driver = new ChromeDriver();		
 			}
 			else if(browserName.equalsIgnoreCase("IE")) 
 			{
+				System.setProperty("webdriver.ie.driver","C:/Users/Demoriel Purnell/git/FaceBook_Framework/Automation/Driver\\MicrosoftWebDriver.exe");
 				driver = new InternetExplorerDriver();		
 			}
-			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-			driver.get(url);
-			driver.manage().window().maximize();
-			driver.manage().deleteAllCookies();
+			else 
+			{
+				B.Print("No Driver Available");
+			}
 			
 			return driver;
 		}
-		
-		
-		
+			
 		
 	}
 
