@@ -43,7 +43,7 @@ public class Login_Page
 		loginButton.click();
 	}
 	
-	public void Fill_Create_A_New_Account_Form(String xpath_value, String first_name, String last_name, String email, String pass) 
+	public void Fill_Create_A_New_Account_Form(String xpath_value, String first_name, String last_name, String email, String pass) throws InterruptedException 
 	{
 		Actions action = new Actions(driver);
 		action.click(driver.findElement(By.xpath(xpath_value)))

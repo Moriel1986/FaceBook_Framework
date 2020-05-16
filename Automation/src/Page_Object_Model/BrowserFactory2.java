@@ -28,6 +28,7 @@ public class BrowserFactory2
 	FileInputStream fip;
 	Properties prop;
 	
+	
 	public void initialconfig() 
 	{
 		file = new File(System.getProperty("user.dir")+ "//src//config//config.properties");
