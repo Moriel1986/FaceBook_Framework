@@ -6,4 +6,4 @@
       <class name="Page_Object_Model.TestScripts"/>
     </classes>
   </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </suite> <!-- Suite -->

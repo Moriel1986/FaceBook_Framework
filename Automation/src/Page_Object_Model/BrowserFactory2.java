@@ -7,9 +7,9 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -59,14 +59,14 @@ public class BrowserFactory2
 	{
 		initialconfig();
 		driverClass();
-		timeout(10);
-		pageloadTimeout(10);
 		max_window();
 		navigate_url(ReadProperty("URL"));
+		timeout(30);
+		pageloadTimeout(30);
 	}
 	
 	@AfterMethod
-	public void endTest()
+	public void endTest() throws InterruptedException
 	{
 		closeBrowser();
 	}
@@ -120,6 +120,7 @@ public class BrowserFactory2
 	{
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
+		
 	}
 		
 	
@@ -155,6 +156,22 @@ public class BrowserFactory2
 		Thread.sleep(sleepNum);
 	}
 	
+	public void Xpath_Locator(String xpath_value)
+	{
+		
+		try
+		{
+			driver.findElement(By.xpath(xpath_value));
+		}
+		
+		catch(NoSuchElementException e)
+		{
+			System.out.println(e.getMessage());
+			System.out.println("No Element Found");
+		}
+	}
+	
+
 	
 	
 	///////////////////////////////////////Action Methods///////////////////////////////////////////////////////////////////
@@ -186,11 +203,18 @@ public class BrowserFactory2
 	}
 	
 	
-	public void clickElement(String xpath_value) 
+	public void click_element(String xpath_value) 
 	{
 		Actions action = new Actions(driver);
 		action.click(driver.findElement(By.xpath(xpath_value))).build().perform();
 	}
+	
+	
+	public void Click_On_Element(String xpath_value) 
+	{
+		driver.findElement(By.xpath(xpath_value)).click();
+	}
+	
 	
 	
 	public void clear(String xpath_value) 

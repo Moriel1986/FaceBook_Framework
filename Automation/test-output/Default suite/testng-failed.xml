@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Page_Object_Model.TestScripts">
+      <class name="Page_Object_Model.copy.RubyOnRailsTestScripts">
         <methods>
-          <include name="startTest"/>
-          <include name="login"/>
           <include name="endTest"/>
+          <include name="VerifyRubyOnRailsLink"/>
+          <include name="startTest"/>
         </methods>
-      </class> <!-- Page_Object_Model.TestScripts -->
+      </class> <!-- Page_Object_Model.copy.RubyOnRailsTestScripts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
